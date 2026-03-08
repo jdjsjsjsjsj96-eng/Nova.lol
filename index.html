@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova.lol - Config Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="snowCanvas"></canvas>
+    <div class="container">
+        <header class="header">
+            <div class="logo">NOVA</div>
+            <nav class="nav">
+                <button class="nav-btn active" id="configTab">
+                    <span class="icon">⚙</span> CONFIGS
+                </button>
+                <button class="nav-btn" id="panelTab">
+                    <span class="icon">👤</span> INFO
+                </button>
+            </nav>
+        </header>
+        <div class="main-content" id="configSection">
+            <div class="editor-section">
+                <div class="editor-header">
+                    <button class="btn-secondary" id="resetBtn">
+                        <span class="icon">↻</span> RESET
+                    </button>
+                    <button class="btn-select" id="selectBtn">
+                        <span class="icon">✓</span> SELECT
+                    </button>
+                    <button class="btn-save" id="saveBtn">
+                        SAVE
+                    </button>
+                    <button class="btn-download" id="downloadBtn">
+                        <span class="icon">↓</span> DOWNLOAD
+                    </button>
+                    <button class="btn-upload" id="uploadBtn">
+                        <span class="icon">↑</span> UPLOAD
+                    </button>
+                    <input type="file" id="fileInput" accept=".lua,.txt" style="display: none;">
+                </div>
+                <div class="editor-container">
+                    <div class="line-numbers" id="lineNumbers"></div>
+                    <textarea class="code-editor" id="codeEditor" spellcheck="false"></textarea>
+                </div>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-header">
+                    <h2>Cloud Configs</h2>
+                    <span class="config-count">2/10</span>
+                </div>
+                <div class="new-config">
+                    <input type="text" placeholder="New config name..." id="newConfigName">
+                    <button class="add-btn" id="addConfigBtn">+</button>
+                </div>
+                <div class="library-section">
+                    <h3>LIBRARY</h3>
+                    <div class="config-list" id="configList"></div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-content" id="panelSection" style="display: none;">
+            <div class="dashboard-container">
+                <h1 class="dashboard-title">Nova Information</h1>
+                <p class="dashboard-subtitle">Download the Nova exe to use these configs</p>
+                
+                <div class="dashboard-grid">
+                    <div class="info-card">
+                        <h2>How to Use</h2>
+                        <ol class="info-list">
+                            <li>Create or edit a config on the CONFIGS tab</li>
+                            <li>Click SELECT to mark it as your active config</li>
+                            <li>Download the Nova.exe from our Discord</li>
+                            <li>Run Nova.exe and enter your KeyAuth license key</li>
+                            <li>Your selected config will load automatically!</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h2>Features</h2>
+                        <ul class="info-list">
+                            <li>✓ Silent Aim</li>
+                            <li>✓ Target Tracer</li>
+                            <li>✓ ESP</li>
+                            <li>✓ Walkspeed</li>
+                            <li>✓ Rapid Fire</li>
+                            <li>✓ Spread Modifications</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h2>Download Nova</h2>
+                        <p>Join our Discord server to get your license key and download link</p>
+                        <a href="#" class="btn-discord" target="_blank">Join Discord</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
